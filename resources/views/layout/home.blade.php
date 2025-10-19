@@ -68,8 +68,11 @@
 <body>
     <nav class="fixed top-0 left-0 right-0 z-10 bg-black neon-shadow p-4 md:flex md:justify-between md:items-center w-full">
         <div class="logo mb-3 md:mb-0 text-center md:text-left">
-            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest neon-link neon-text-hover">
-                AON Robotics
+            {{-- Replaced text with an image logo --}}
+            <a href="{{ url('/') }}" class="inline-block">
+                <img src="{{ asset('pictures/logo.png') }}" 
+                     alt="AON Robotics Logo" 
+                     class="h-12 neon-image-glow" >
             </a>
         </div>
 
