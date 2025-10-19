@@ -15,18 +15,24 @@
             font-family: Arial, sans-serif;
             background-color: #0e0e0e;
             color: #fff;
+            /* Added padding-top to prevent content from going under the fixed nav */
+            padding-top: 60px; 
         }
 
         /* Navbar styling */
         nav {
             background-color: #111;
             padding: 15px 30px;
-            box-shadow: 0 0 10px rgba(88, 154, 105, 0.2); /* softer shadow */
+            box-shadow: 0 0 10px rgba(88, 154, 105, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            /* ADDED: Makes the navbar stay at the top */
+            position: fixed; 
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -39,7 +45,7 @@
         }
 
         nav a:hover {
-            color: #7dbf91; /* slightly brighter hover */
+            color: #7dbf91;
             text-shadow: 0 0 4px rgba(88, 154, 105, 0.4);
         }
 
@@ -51,7 +57,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar at the top -->
     <nav>
         <div class="logo">
             <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest">
@@ -67,7 +72,6 @@
         </div>
     </nav>
 
-    <!-- Main content -->
     <main>
         @yield('content')
     </main>
