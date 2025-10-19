@@ -9,87 +9,49 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --neon-green: #589a69;
+            --accent-green: #589a69;
         }
 
-        /* Base Styles */
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: #0e0e0e;
             color: #fff;
-            padding-top: 80px; /* Space for fixed navbar */
+            padding-top: 80px;
         }
 
-        /* Neon Effects */
-        .neon-shadow {
-            box-shadow: 0 0 15px rgba(88, 154, 105);
+        a {
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .neon-link {
-            color: var(--neon-green);
-            transition: text-shadow 0.3s ease, background-color 0.3s ease;
+        /* Hero Title */
+        .hero-title {
+            color: var(--accent-green);
         }
 
-        .neon-text-hover:hover {
-            text-shadow: 0 0 8px var(--neon-green), 0 0 15px rgba(43, 252, 15, 0.5);
-        }
-
-        /* Hero Image Glow */
-        .robot-image-glow {
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))
-                    drop-shadow(0 0 10px var(--neon-green));
-            transition: transform 0.4s ease-out;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .robot-image-glow:hover {
-            transform: scale(1.02);
-        }
-
-        /* Responsive Padding for Navbar */
         @media (max-width: 600px) {
             body {
                 padding-top: 130px;
             }
         }
-
-        /* Hero Title */
-        .hero-title {
-            color: var(--neon-green);
-            text-shadow: 0 0 8px var(--neon-green);
-        }
     </style>
 </head>
 <body>
-    <!-- Fixed Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-10 bg-black neon-shadow p-4 md:flex md:justify-between md:items-center w-full">
-        <!-- Logo -->
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-10 bg-black p-4 md:flex md:justify-between md:items-center w-full border-b border-[#589a69]/30">
         <div class="logo mb-3 md:mb-0 text-center md:text-left">
-            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest neon-link neon-text-hover">
+            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest text-[#589a69]">
                 AON Robotics
             </a>
         </div>
 
-        <!-- Navigation Links -->
         <div class="links flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2">
-            <a href="{{ url('/') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-green-900/20 neon-text-hover">
-                Home
-            </a>
-            <a href="{{ url('/about') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-green-900/20 neon-text-hover">
-                About
-            </a>
-            <a href="{{ url('/team_members') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-green-900/20 neon-text-hover">
-                Team
-            </a>
-            <a href="{{ url('/project_management') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-green-900/20 neon-text-hover">
-                Projects
-            </a>
-            <a href="{{ url('/sponsors') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-green-900/20 neon-text-hover">
-                Sponsors
-            </a>
-            <a href="{{ url('/apply_now') }}" class="bg-green-600/20 text-white font-bold p-2 rounded-lg hover:bg-green-600/40 transition-colors duration-300">
+            <a href="{{ url('/') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Home</a>
+            <a href="{{ url('/about') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">About</a>
+            <a href="{{ url('/team_members') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Team</a>
+            <a href="{{ url('/project_management') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Projects</a>
+            <a href="{{ url('/sponsors') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Sponsors</a>
+            <a href="{{ url('/apply_now') }}" class="bg-[#589a69] text-white font-bold p-2 rounded-lg hover:bg-[#6fb982] transition-colors duration-300">
                 Apply Now
             </a>
         </div>
@@ -106,32 +68,32 @@
                 <p class="text-xl mb-8 text-gray-300">
                     We are AON Robotics, where innovation meets competition. Discover the award-winning designs and dedicated team driving the future of autonomous systems.
                 </p>
-                <a href="{{ url('/about') }}" class="inline-block py-3 px-8 text-lg font-bold rounded-xl border-2 border-neon-green neon-link hover:bg-green-900/30 transition-all duration-300 shadow-lg shadow-green-700/30">
+                <a href="{{ url('/about') }}" class="inline-block py-3 px-8 text-lg font-bold rounded-xl border-2 border-[#589a69] text-[#589a69] hover:bg-[#589a69]/20 transition-all duration-300">
                     JOIN OUR TEAM
                 </a>
             </div>
 
             <div class="flex justify-center md:justify-end">
-                <img src="https://placehold.co/700x700/0e0e0e/2bfc0f?text=AON+ROBOT+HERO" 
-                     alt="AON Robotics Competition Robot with Neon Glow" 
-                     class="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto robot-image-glow">
+                <img src="https://placehold.co/700x700/0e0e0e/589a69?text=AON+ROBOT+HERO" 
+                     alt="AON Robotics Competition Robot" 
+                     class="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto">
             </div>
         </section>
 
-        <!-- Recent Achievements -->
-        <section class="mt-20 py-10 border-t border-green-700/30">
-            <h2 class="text-3xl font-extrabold text-center mb-10 hero-title">Recent Achievements</h2>
+        <!-- Achievements -->
+        <section class="mt-20 py-10 border-t border-[#589a69]/30">
+            <h2 class="text-3xl font-extrabold text-center mb-10 text-[#589a69]">Recent Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-gray-800/50 rounded-lg neon-shadow hover:bg-gray-700/50 transition-colors duration-300">
-                    <div class="text-4xl font-bold neon-link mb-2">3X</div>
+                <div class="p-6 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-[#589a69] mb-2">3X</div>
                     <p class="text-gray-400">State Champions</p>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg neon-shadow hover:bg-gray-700/50 transition-colors duration-300">
-                    <div class="text-4xl font-bold neon-link mb-2">12+</div>
+                <div class="p-6 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-[#589a69] mb-2">12+</div>
                     <p class="text-gray-400">VEX Competitions</p>
                 </div>
-                <div class="p-6 bg-gray-800/50 rounded-lg neon-shadow hover:bg-gray-700/50 transition-colors duration-300">
-                    <div class="text-4xl font-bold neon-link mb-2">95%</div>
+                <div class="p-6 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-300">
+                    <div class="text-4xl font-bold text-[#589a69] mb-2">95%</div>
                     <p class="text-gray-400">Success Rate in Matches</p>
                 </div>
             </div>
