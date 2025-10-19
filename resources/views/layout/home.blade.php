@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --accent-green: #589a69;
+            --green-accent: #589a69;
         }
 
         body {
@@ -20,13 +20,54 @@
             padding-top: 80px;
         }
 
-        a {
-            transition: background-color 0.3s ease, color 0.3s ease;
+        /* Navbar */
+        nav {
+            background-color: #111;
+            border-bottom: 1px solid rgba(88, 154, 105, 0.2);
         }
 
-        /* Hero Title */
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--green-accent);
+            background-color: rgba(88, 154, 105, 0.1);
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: rgba(88, 154, 105, 0.25);
+            border: 2px solid var(--green-accent);
+            border-radius: 0.75rem;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.75rem 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgba(88, 154, 105, 0.45);
+        }
+
+        /* Hero title */
         .hero-title {
-            color: var(--accent-green);
+            color: var(--green-accent);
+        }
+
+        /* Robot Image Glow */
+        .robot-image-glow {
+            filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5))
+                    drop-shadow(0 0 16px rgba(88, 154, 105, 0.7));
+            transition: transform 0.4s ease-out;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .robot-image-glow:hover {
+            transform: scale(1.03);
         }
 
         @media (max-width: 600px) {
@@ -38,22 +79,20 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-10 bg-black p-4 md:flex md:justify-between md:items-center w-full border-b border-[#589a69]/30">
+    <nav class="fixed top-0 left-0 right-0 z-10 p-4 md:flex md:justify-between md:items-center w-full">
         <div class="logo mb-3 md:mb-0 text-center md:text-left">
-            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest text-[#589a69]">
+            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest">
                 AON Robotics
             </a>
         </div>
 
         <div class="links flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2">
-            <a href="{{ url('/') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Home</a>
-            <a href="{{ url('/about') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">About</a>
-            <a href="{{ url('/team_members') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Team</a>
-            <a href="{{ url('/project_management') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Projects</a>
-            <a href="{{ url('/sponsors') }}" class="text-[#589a69] font-semibold p-2 rounded-md hover:bg-[#589a69]/20">Sponsors</a>
-            <a href="{{ url('/apply_now') }}" class="bg-[#589a69] text-white font-bold p-2 rounded-lg hover:bg-[#6fb982] transition-colors duration-300">
-                Apply Now
-            </a>
+            <a href="{{ url('/') }}" class="font-semibold p-2 rounded-md">Home</a>
+            <a href="{{ url('/about') }}" class="font-semibold p-2 rounded-md">About</a>
+            <a href="{{ url('/team_members') }}" class="font-semibold p-2 rounded-md">Team</a>
+            <a href="{{ url('/project_management') }}" class="font-semibold p-2 rounded-md">Projects</a>
+            <a href="{{ url('/sponsors') }}" class="font-semibold p-2 rounded-md">Sponsors</a>
+            <a href="{{ url('/apply_now') }}" class="btn text-white">Apply Now</a>
         </div>
     </nav>
 
@@ -68,21 +107,19 @@
                 <p class="text-xl mb-8 text-gray-300">
                     We are AON Robotics, where innovation meets competition. Discover the award-winning designs and dedicated team driving the future of autonomous systems.
                 </p>
-                <a href="{{ url('/about') }}" class="inline-block py-3 px-8 text-lg font-bold rounded-xl border-2 border-[#589a69] text-[#589a69] hover:bg-[#589a69]/20 transition-all duration-300">
-                    JOIN OUR TEAM
-                </a>
+                <a href="{{ url('/about') }}" class="btn inline-block">JOIN OUR TEAM</a>
             </div>
 
             <div class="flex justify-center md:justify-end">
                 <img src="https://placehold.co/700x700/0e0e0e/589a69?text=AON+ROBOT+HERO" 
-                     alt="AON Robotics Competition Robot" 
-                     class="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto">
+                     alt="AON Robotics Competition Robot with Glow" 
+                     class="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto robot-image-glow">
             </div>
         </section>
 
         <!-- Achievements -->
         <section class="mt-20 py-10 border-t border-[#589a69]/30">
-            <h2 class="text-3xl font-extrabold text-center mb-10 text-[#589a69]">Recent Achievements</h2>
+            <h2 class="text-3xl font-extrabold text-center mb-10 hero-title">Recent Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="p-6 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors duration-300">
                     <div class="text-4xl font-bold text-[#589a69] mb-2">3X</div>

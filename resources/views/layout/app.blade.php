@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <style>
         :root {
-            --neon-green: #2bfc0f;
+            --accent-green: #589a69;
         }
 
         body {
@@ -21,24 +21,26 @@
         nav {
             background-color: #111;
             padding: 15px 30px;
-            box-shadow: 0 0 10px rgba(43,252,15,0.4);
+            box-shadow: 0 0 10px rgba(88, 154, 105, 0.2); /* softer shadow */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative; /* keeps navbar at top */
+            position: relative;
             top: 0;
             z-index: 1000;
         }
 
         nav a {
-            color: var(--neon-green);
+            color: var(--accent-green);
             text-decoration: none;
             margin-left: 15px;
             font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
         nav a:hover {
-            text-shadow: 0 0 6px var(--neon-green);
+            color: #7dbf91; /* slightly brighter hover */
+            text-shadow: 0 0 4px rgba(88, 154, 105, 0.4);
         }
 
         main {
@@ -52,7 +54,7 @@
     <!-- Navbar at the top -->
     <nav>
         <div class="logo">
-            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest neon-link neon-text-hover">
+            <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest">
                 AON Robotics
             </a>
         </div>
