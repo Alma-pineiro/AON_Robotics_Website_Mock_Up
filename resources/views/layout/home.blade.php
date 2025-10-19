@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'AON Robotics - Home')</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
@@ -67,7 +66,6 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-10 bg-black neon-shadow p-4 md:flex md:justify-between md:items-center w-full">
         <div class="logo mb-3 md:mb-0 text-center md:text-left">
             <a href="{{ url('/') }}" class="text-xl font-bold uppercase tracking-widest neon-link neon-text-hover">
@@ -87,9 +85,7 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="p-8 max-w-6xl mx-auto min-h-screen">
-        <!-- Hero Section -->
         <section class="mb-16 pt-4 grid md:grid-cols-2 gap-12 items-center">
             <div class="text-center md:text-left">
                 <h1 class="hero-title text-4xl md:text-6xl font-extrabold mb-4 pb-2 leading-tight uppercase">
@@ -104,13 +100,12 @@
             </div>
 
             <div class="flex justify-center md:justify-end">
-                <img src="https://placehold.co/700x700/0e0e0e/589a69?text=AON+ROBOT+HERO" 
-                     alt="AON Robotics Competition Robot with Glow" 
+                <img src="{{ asset('pictures/temp.png') }}" 
+                     alt="Detailed diagram of AON Robotics Competition Robot, Claw Elevator System" 
                      class="w-full max-w-sm sm:max-w-md md:max-w-xl h-auto robot-image-glow">
             </div>
         </section>
 
-        <!-- Achievements -->
         <section class="mt-20 py-10 border-t border-[#589a69]/30">
             <h2 class="text-3xl font-extrabold text-center mb-10 hero-title">Recent Achievements</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
