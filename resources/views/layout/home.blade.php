@@ -76,16 +76,6 @@
             </a>
         </div>
 
-        <div class="links flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2">
-            <a href="{{ url('/') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-[#589a69]/10 neon-text-hover">Home</a>
-            <a href="{{ url('/about') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-[#589a69]/10 neon-text-hover">About</a>
-            <a href="{{ url('/team_members') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-[#589a69]/10 neon-text-hover">Team</a>
-            <a href="{{ url('/project_management') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-[#589a69]/10 neon-text-hover">Projects</a>
-            <a href="{{ url('/sponsors') }}" class="neon-link font-semibold p-2 rounded-md hover:bg-[#589a69]/10 neon-text-hover">Sponsors</a>
-            <a href="{{ url('/apply_now') }}" class="bg-[#589a69]/30 text-white font-bold p-2 rounded-lg hover:bg-[#589a69]/50 transition-colors duration-300">
-                Apply Now
-            </a>
-        </div>
     </nav>
 
     <main class="p-8 max-w-6xl mx-auto min-h-screen">
