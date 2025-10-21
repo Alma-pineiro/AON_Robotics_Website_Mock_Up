@@ -68,7 +68,9 @@
             <a href="{{ url('/about') }}">About</a>
             <a href="{{ url('/team_members') }}">Team</a>
             <a href="{{ url('/sponsors') }}">Sponsors</a>
-            <a href="{{ url('/apply_now') }}">Apply Now</a>
+            <a href="{{ url('/apply_now') }}" class="bg-[#589a69]/30 text-white font-bold p-2 rounded-lg hover:bg-[#589a69]/50 transition-colors duration-300">
+                Apply Now
+            </a>
         </div>
     </nav>
 
