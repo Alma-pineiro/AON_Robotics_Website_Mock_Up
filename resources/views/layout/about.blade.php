@@ -3,23 +3,41 @@
 @section('title', 'About Us - AON Robotics')
 
 @section('content')
-  <h2 style="color:var(--neon-green);text-shadow:0 0 8px var(--neon-green);">About Us</h2>
+<div class="content-container">
 
-  <div style="text-align:center;margin:20px 0;">
-    <img src="{{ asset('pictures/team.jpg') }}" alt="AON Robotics Team"
-         style="max-width:100%;height:auto;border-radius:12px;box-shadow:0 0 18px rgba(43,252,15,0.18);">
-  </div>
+    <h2 class="section-title neon-glow-text">About Us</h2>
 
-  <p><strong>AON Robotics</strong> is a student-led robotics organization at the <strong>University of Puerto Rico at Mayagüez (UPRM)</strong>. Our mission is to innovate, design, and compete in robotics projects while promoting STEM education and hands-on engineering experiences.</p>
+    <div class="team-image-container">
+        <img src="{{ asset('pictures/team.jpg') }}" alt="AON Robotics Team" class="team-image">
+    </div>
 
-  <h3 style="color:var(--neon-green);">Our Goals</h3>
-  <ul style="list-style:none;padding-left:0;">
-    <li style="margin:8px 0;"><span style="color:var(--neon-green);margin-right:8px;">•</span>Develop cutting-edge robotics projects</li>
-    <li style="margin:8px 0;"><span style="color:var(--neon-green);margin-right:8px;">•</span>Provide learning opportunities for UPRM students</li>
-    <li style="margin:8px 0;"><span style="color:var(--neon-green);margin-right:8px;">•</span>Compete in local and international robotics competitions</li>
-    <li style="margin:8px 0;"><span style="color:var(--neon-green);margin-right:8px;">•</span>Collaborate with industry and research partners</li>
-  </ul>
+    <div class="about-summary-card">
+        <p class="summary-text">
+            <strong>AON Robotics</strong> is a student-led robotics organization at the <strong>University of Puerto Rico at Mayagüez (UPRM)</strong>. Our mission is to innovate, design, and compete in robotics projects while promoting STEM education and hands-on engineering experiences.
+        </p>
+    </div>
 
-  <h3 style="color:var(--neon-green);">Contact</h3>
-  <p>Reach out: <a href="mailto:aonrobotics@uprm.edu" style="color:var(--neon-green);">aonrobotics@uprm.edu</a></p>
+    <div class="goals-contact-grid">
+        <div class="goals-section">
+            <h3 class="section-subtitle neon-glow-text">Our Goals</h3>
+            <ul class="goal-list">
+                <li class="goal-item"><span class="neon-bullet">>></span> Develop cutting-edge robotics projects</li>
+                <li class="goal-item"><span class="neon-bullet">>></span> Provide learning opportunities for UPRM students</li>
+                <li class="goal-item"><span class="neon-bullet">>></span> Compete in local and international robotics competitions</li>
+                <li class="goal-item"><span class="neon-bullet">>></span> Collaborate with industry and research partners</li>
+            </ul>
+        </div>
 
+        <div class="contact-section">
+            <h3 class="section-subtitle neon-glow-text">Contact</h3>
+            <p class="contact-text">
+                Reach out to us and let's build the future:
+            </p>
+            <p class="contact-email">
+                <a href="mailto:aonrobotics@uprm.edu" class="neon-link">aonrobotics@uprm.edu</a>
+            </p>
+            <hr class="neon-separator">
+        </div>
+    </div>
+</div>
+@endsection

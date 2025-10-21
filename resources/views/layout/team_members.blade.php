@@ -1,3 +1,4 @@
+@extends('layout.app')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,13 +23,13 @@
         <h1>AON Robotics - Our Team</h1>
     </header>
 
-        <nav>
+        <!-- <nav>
         <a href="{{ url('/') }}">Home</a>
         <a href="{{ url('/about') }}">About Us</a>
         <a href="{{ url('/team_members') }}">Team Members</a>
         <a href="{{ url('/sponsors') }}">Sponsors</a>
         <a href="{{ url('/project_management') }}">Poroject Management</a>
-        </nav>
+        </nav> -->
 
     <div class="container">
         <h2>Meet Our Team</h2>
