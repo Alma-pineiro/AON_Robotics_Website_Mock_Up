@@ -9,3 +9,75 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+.futuristic-bg {
+  background: linear-gradient(180deg, #fafafa 0%, #f1f3f6 100%);
+  padding: 4rem 2rem;
+  color: #1a1a1a;
+  font-family: 'Inter', 'Roboto Mono', monospace;
+}
+
+.text-primary {
+  color: #0055ff;
+}
+
+.text-accent {
+  color: #00b894;
+}
+
+.card-bg {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.subtle-glow {
+  box-shadow: 0 0 20px rgba(0, 85, 255, 0.05);
+}
+
+.soft-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d0d7de, transparent);
+  margin: 1rem auto 2rem;
+  width: 60%;
+}
+
+.goals-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.arrow {
+  color: #0055ff;
+  margin-right: 8px;
+}
+
+.contact-link {
+  color: #0055ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #00b894;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
